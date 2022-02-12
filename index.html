@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Change the color!</title>
+	<style type="text/css">
+		.bottons{
+			position:relative;
+			top:-100px;
+		}
+        .canvas-rect {
+            position: relative;
+            left: 80%;
+        }
+	</style>
+</head>
+<body>
+	<div class="canvas-rect">
+		<canvas id="1" width="100" height="100"></canvas>
+		<script type="text/javascript">
+			canvas = document.getElementById("1");
+			context = canvas.getContext("2d");
+			context.fillStyle = "blue";
+			context.fillRect(10, 10, 50, 50);
+		</script>
+	</div>
+	<div class="bottons">
+		<button onclick="changeColour(value)" value="red">
+			красный
+		</button>
+		<button onclick="changeColour(value)" value="blue">
+			синий
+		</button>
+		<button onclick="changeColour(value)" value="green">
+			зелёный
+		</button>
+		<button onclick="changeColour(value)" value="black">
+			чёрный
+		</button>
+		<button onclick="changeColour(value)" value="orange">
+			оранжевый
+		</button>
+		<script type="text/javascript">
+			function changeColour(tcolour)
+			{
+			context.fillStyle = tcolour;
+			context.clearRect(10, 10, 50, 50);
+			context.fillRect(10, 10, 50, 50);
+			}
+		</script>
+	</div>
+
+</body></html>
